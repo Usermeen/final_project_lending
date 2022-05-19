@@ -88,11 +88,17 @@ h6 {
 body{
    background-color: #ffaec9;
 }
+.border {
+   border: 2px solid black;
+   border-radius: 10px;
+}
+
 .body-container {
    min-height: 100%;
    margin: 0 auto;
    position: absolute;
 }
+/* .............Header................ */
 .header_container {
    padding: 0 20px;
    display: flex;
@@ -147,6 +153,7 @@ body{
    border-radius: 20px;
 }
 
+/* ...............Content...................... */
 .main-container {
    margin-top: 70px;
    padding: 10px 15px;
@@ -156,7 +163,6 @@ body{
 }
 
 .posts-container {
-   
    width: 60%;
    display: flex;
    flex-direction: column;
@@ -168,12 +174,6 @@ body{
    display: flex;
    flex-direction: column;
    margin: 0 15px 15px 15px;
-}
-
-
-.border {
-   border: 2px solid black;
-   border-radius: 10px;
 }
 
 .content_info{
@@ -194,15 +194,13 @@ body{
    align-items: center;
    padding-right: 10px;
 }
-.content_info .content_date{
- 
-}
+
 .content_info .content_date{
    display: flex;
    align-items: center;
    flex-wrap: wrap;
-
 }
+
 .content_info .text {
    font-size: 20px;
    font-weight: 400;
@@ -213,7 +211,6 @@ body{
 .posts-container .post_item{
    font-size: 18px;
    margin-top: 20px;
-
 }
 .post_item_image{
    margin-top: 20px;
@@ -231,11 +228,9 @@ body{
    justify-content: start;
    margin: 20px 10px;
    flex-wrap: wrap;
-
 }
 .like {
    display: flex;
-
    align-items: center;
    margin-right: 50px;
 }
@@ -357,10 +352,7 @@ body{
 .header-burger{
    display: none;
 }
-
-@media (max-width:1200px){
-
-}
+/* ............Media styles................. */
 
 @media (max-width:992px){
    .header-navigation__container{
