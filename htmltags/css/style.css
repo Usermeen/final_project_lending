@@ -78,9 +78,8 @@ h6 {
 	 font-size: inherit;
 	 font-weight: 400;
 }
-/*......... Обнуляющий стиль конец............... */
 
-/* ......................Header.................. */
+/* ...........General styles............. */
 *{
 	 font-family: 'Roboto';
 
@@ -153,6 +152,10 @@ body{
 	 border-radius: 20px;
 }
 
+.header__burger{
+	display: none;
+}
+
 /* ...............Content...................... */
 .content__wrapper {
 	 margin-top: 70px;
@@ -161,14 +164,14 @@ body{
 	 min-height: 100px;
 	 position: relative;  
 }
-
-.posts-container {
+/* ...........Publications block................ */
+.publications__container {
 	 width: 60%;
 	 display: flex;
 	 flex-direction: column;
 	 overflow: hidden;
 }
-.posts-container_content {
+.publications__content {
 	 position: relative;
 	 padding: 15px 20px;
 	 display: flex;
@@ -176,60 +179,58 @@ body{
 	 margin: 0 15px 15px 15px;
 }
 
-.content_info{
+.publications__info{
 	 display: flex;
 }
-.content_info .user_logo{
-	 flex: 0 1 43%;
-}
 
-.content_info img{
+.publications__info img{
 	 width: 35px;
 	 margin-right: 5px;
 }
 
-.content_info .user_logo{
+.publications__info .info-logo{
 	 display: flex;
+	 flex: 0 1 40%;
 	 flex-wrap: wrap;
 	 align-items: center;
 	 padding-right: 10px;
 }
 
-.content_info .content_date{
+.publications__info .info-date{
 	 display: flex;
 	 align-items: center;
 	 flex-wrap: wrap;
 }
 
-.content_info .text {
+.publications__info .text {
 	 font-size: 20px;
 	 font-weight: 400;
 }
-.posts-container_content .wrapper{
+.publications__content .wrapper{
 	 max-width: 800px ;
 }
-.posts-container .post_item{
+.publications__container .publications__item{
 	 font-size: 18px;
 	 margin-top: 20px;
 }
-.post_item_image{
+.publications__item-image{
 	 margin-top: 20px;
 	 box-shadow: 0 0 10px black;
 	 flex: 0 0 80%;
 }
-.post_item img{
+.publications__item img{
 	 max-width: 100%;
 }
-.post_item p{
+.publications__item p{
 	 font-size: 14px;
 }
-.content_like_row {
+.comment__row {
 	 display: flex;
 	 justify-content: start;
 	 margin: 20px 10px;
 	 flex-wrap: wrap;
 }
-.like {
+.button__like {
 	 display: flex;
 	 align-items: center;
 	 margin-right: 50px;
@@ -240,7 +241,7 @@ body{
 .like_text {
 	 font-size: 22px;
 }
-.comment {
+.button__comment {
 	 display: flex;
 	 align-items: center;
 }
@@ -251,10 +252,10 @@ body{
 .comment_text {
 	 font-size: 22px;
 }
-.content_like_row button{
+.comment__row button{
 	 background: none;
 }
-.content_like_row button :active{
+.comment__row button :active{
 	 animation: no;
 }
 .content__student__block {
@@ -264,31 +265,30 @@ body{
 	 flex-direction: column;
 	 align-items: center;
 }
-
-.content__student__info{
+/* .......Perspective_student............ */
+.content__perspective_student{
 	 margin: 20px auto ;
 	 text-align: center;
 }
-.content__student__info span{
+.content__perspective_student span{
 	 font-size: 20px;
 }
-.content__student__info div{
+.content__perspective_student div{
 	 margin-bottom: 20px;
 }
-
 .content__student__logo{
 	 margin: 20px 0;
 	 position: relative;
 	 min-width: 100%;
 }
-.content__student__logo .logo_item{
+.content__student__logo .student__logo__item{
 	 text-align: center;
 	 max-width: 100%;
 	 z-index: 1;
 	 display: block;
 	 opacity: 0.5;
 }
-.logo_item img{
+.student__logo__item img{
 	 max-width: 100%;
 }
 .content__student__logo::after{
@@ -307,7 +307,8 @@ body{
 	 width: 100%;
 	 bottom:20px;
 }
-.info-container {
+/* .........Today_holiday............. */
+.today__container {
 	 flex: 1 1 20%;
 	 max-height: 200px;
 	 padding: 20px;
@@ -315,17 +316,16 @@ body{
 	 flex-direction: column;
 	 justify-content: center;
 }
-
-.today {
+.today__title {
 	 font-size: 20px;
 	 font-weight: 600;
 	 text-align: center;
 }
-.today_date {
+.today__date {
 	 text-align: center;
 	 margin-top: 10px;
 }
-.today_date img{
+.today__date img{
 	 width: 35px;
 }
 .date_text {
@@ -333,57 +333,64 @@ body{
 	 text-align: center;
 	 margin-top: 8px;
 }
-.today_holiday {
+.today__holiday {
 	 text-align: center;
 	 margin-top: 20px;
 }
-.today_holiday_name {
+.today__holiday-name {
 	 margin-top: 20px;
 	 font-weight: 600;
 	 text-align: center;
 
 }
-.header__burger{
-	 display: none;
-}
-/* ............Media styles................. */
 
+/* ............Media tablets................ */
 @media (max-width:992px){
 .header__menu__list{
 	justify-content: end;
 }
 
-.info-container {
+.today__container {
 	padding: 10px;
 }
-.content__student__info{ 
+.content__perspective_student{ 
 	padding: 0 10px;
 }
-.content_info .text{
-	font-size: 14px;
-}
-.posts-container .post_item{
+.publications__container .publications__item{
 	margin-top: 10px;
 }
-.content_info{
+.publications__info{
 	display: flex;
 	justify-content: space-between;
+}
+.publications__info .text{
+	font-size: 13px;
+	font-weight: 500;
+}
+.comment__row{
+	margin:20px 0 0 10px;
+	justify-content: space-between;
+}
+.comment__row img{
+	width: 24px;
 }
 .like_text,.comment_text{
 	font-size: 18px;
 }
-.content_like_row{
-	margin:20px 0 0 10px;
-	justify-content: space-between;
-}
-.content_like_row img{
-	width: 24px;
-}
 }
 
+/* .........Media_mobile........... */
 @media (max-width:767px){
 body.lock{
 	overflow: hidden;
+}
+.publications__content {
+	margin: 14px 0 0 0;
+}
+.content__wrapper {
+	flex-direction: column;
+	align-items: center;
+	margin-top: 60px;
 }
 .header__container{
 	min-height: 50px;
@@ -412,13 +419,10 @@ body.lock{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	/*min-height: 100%;*/
+	min-height: 100%;
 }
-.content__wrapper {
-	flex-direction: column;
-	align-items: center;
-}
-.info-container{
+
+.today__container{
 	display: flex;
 	flex-direction: row;
 	min-width: 100%;
@@ -428,32 +432,32 @@ body.lock{
 	justify-content: space-around;
 	align-items: center;
 }
-.info_item .today_holiday {
+.today__item .today__holiday {
 	margin: 0;
 }
-.info_item .today{
+.today__item .today__title{
 	font-size: 18px;
 }
-.today_holiday_name{
+.today__holiday-name{
 	line-height: 20px;
 }
-.today_date{
+.today__date{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
-.today_date img{
+.today__date img{
 	display: inline-block;
 }
-.posts-container{
+.publications__container{
 	order: 3;
 	width: 100%;
-	margin-top: 14px;
+	margin-top: 0;
 }
-.posts-container_content{
-	margin: 10px 0 0 0;
+.publications__info .text{
+	font-weight: 500;
 }
-.post_item p{
+.publications__item p{
 	font-size: 16px;
 }
 .content__student__block{
@@ -461,13 +465,13 @@ body.lock{
 	width: 100%;
 	flex-direction: row;
 	height: 200px;
-
 }
 .content__student__block{
 	flex-direction: row;
 	justify-content: flex-end;
 }
-.content__student__logo::after, .content__student__logo::before{
+.content__student__logo::after, 
+.content__student__logo::before{
 	display: none;
 }
 .content__student__logo {
@@ -490,7 +494,6 @@ body.lock{
 .header__menu.active{
 	top:0;
 	transition: all 0.3s ease 0s;
-
 }
 
 .header__burger{
@@ -499,7 +502,6 @@ body.lock{
 	width: 30px;
 	height: 20px;
 	z-index: 3;
-	/*left: 200px;*/
 }
 
 .header__burger::before,
@@ -511,7 +513,6 @@ body.lock{
 	background-color: rgb(111, 162, 227);
 	left:0;
 	transition: all 0.3s ease 0s;
-
 }
 .header__burger::before{
 	top: 0;
@@ -526,7 +527,6 @@ body.lock{
 .header__burger.active::after{
 	transform: rotate(45deg);
 	bottom: 9px;
-
 }
 .header__burger span{
 	position: absolute;
@@ -540,8 +540,6 @@ body.lock{
 .header__burger.active span{
 	transform: scale(0);
 }
-body.lock{
-	overflow: hidden;
-}
+
 }
 
